@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java-multi-modules</artifactId>
+        <groupId>ohjongsung.multi</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ohjongsung.password.sha</groupId>
+    <artifactId>password-sha</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <commos.codec.version>1.11</commos.codec.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ohjongsung.password</groupId>
+            <artifactId>password</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commos.codec.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>*.json</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>
